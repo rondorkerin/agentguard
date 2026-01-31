@@ -1,0 +1,31 @@
+{
+  "name": "agentguard",
+  "version": "0.1.0",
+  "description": "Security scanner and trust layer for AI agent skills/plugins",
+  "main": "dist/index.js",
+  "bin": {
+    "agentguard": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["ai", "agent", "security", "scanner", "supply-chain", "trust"],
+  "author": "metatransformer",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^12.1.0",
+    "glob": "^10.3.10"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
