@@ -56,10 +56,10 @@ export const PATTERNS: Pattern[] = [
   {
     id: 'CRED-006',
     name: 'Outbound HTTP with sensitive data',
-    description: 'HTTP request that may exfiltrate data to external server',
+    description: 'HTTP request that sends sensitive-looking data (secrets, tokens, keys, credentials)',
     severity: 'HIGH',
     category: 'credential-exfil',
-    regex: /(?:fetch|axios|http\.request|https\.request|got|request)\s*\(/,
+    regex: /(?:fetch|axios|http\.request|https\.request|got|request)\s*\(.*(?:secret|token|key|cred|password|passwd|auth|cookie|session)/i,
   },
   {
     id: 'CRED-007',
